@@ -3,13 +3,15 @@
 
 #include "Utility.h"
 
-//DragonSlayer::DragonSlayer
+
 DragonSlayer::DragonSlayer(std::string name_, int hp_, int armor_, int attackDamage_) : 
 Character(hp_, armor_, attackDamage_), 
 name(name_)
-{ }
+{ 
+    helpfulItems = makeHelpfulItems(randomise());
+    defensiveItems = makeDefensiveItems(randomise());
+}
 
-//DragonSlayer::getName
 const std::string& DragonSlayer::getName()
 {
     return name;
@@ -41,7 +43,6 @@ void DragonSlayer::attack(Character& other)
         
 }
 
-//DragonSlayer::getStats
 std::string DragonSlayer::getStats()
 {
     return getCharacterStats(this);
