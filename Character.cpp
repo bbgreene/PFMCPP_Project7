@@ -124,8 +124,6 @@ void Character::printStats()
     */
     std::cout << getCharacterStats(this);
 
-    std::cout << getStats(); 
-    
     std::cout << std::endl;
     std::cout << std::endl;
 }
