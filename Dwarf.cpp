@@ -10,8 +10,6 @@ name(name_)
     defensiveItems = makeDefensiveItems(randomise());
 }
 
-
-
 const std::string& Dwarf::getName()
 {
     return name;
